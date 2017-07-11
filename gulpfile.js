@@ -223,7 +223,9 @@ gulp.task('build', [
 	'img',
 	'sprite',
 	'libs',
+    'head',
 	'mail',
+	'head',
 	'fonts-less'
 ]);
 
@@ -232,7 +234,7 @@ gulp.task('build', [
 gulp.task('browser-sync', function () {
 
 	browserSync.init({
-		proxy: "jurdis/build",
+		proxy: "bargain/build",
 		notify: true
 	});
 });

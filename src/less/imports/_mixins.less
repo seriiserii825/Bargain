@@ -7,3 +7,35 @@
   height: @px;
   line-height: @px;
 }
+
+/* fonts */
+.proximaregular{
+	font-family: 'ProximaNovaRegular', sans-serif;
+}
+.proximalight{
+	font-family: 'ProximaNovaLight', sans-serif;
+}
+.proximablack{
+	font-family: 'ProximaNovaBlack', sans-serif;
+}
+.proximabold{
+	font-family: 'ProximaNovaBold', sans-serif;
+}
+
+/* btn */
+.btn{
+	position: relative;
+	.inline-block;
+	padding: 28px 25px;
+	.proximablack;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: @white;
+	background:    linear-gradient(#7d3ca9, #7d3ca9 50%, #611b8f 50%, #611b8f);
+	transition: all .6s ease;
+	z-index: 2;
+	&:hover{
+		color: @white;
+		background:    linear-gradient(#7d3ca9,  #611b8f);
+	}
+}

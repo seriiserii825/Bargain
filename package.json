@@ -1,5 +1,5 @@
 {
-  "name": "jurdis",
+  "name": "bargain",
   "version": "1.0.0",
   "description": "website",
   "main": "gulpfile.js",
@@ -16,7 +16,6 @@
     "gulp-cssmin": "^0.2.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-filter": "^5.0.0",
-    "gulp-google-cdn": "^2.1.0",
     "gulp-image": "^2.7.5",
     "gulp-imagemin": "^3.2.0",
     "gulp-jsmin": "^0.1.5",
@@ -36,5 +35,13 @@
   },
   "dependencies": {
     "gulp-file-include": "^1.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seriiserii825/Bargain.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seriiserii825/Bargain/issues"
+  },
+  "homepage": "https://github.com/seriiserii825/Bargain#readme"
 }
