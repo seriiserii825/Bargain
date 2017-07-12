@@ -31,5 +31,20 @@ $(function () {
 	===============================*/
 	$('.advantages__item-content p').equalHeights();
 
+	/*show-modal
+	===============================*/
+	$('.show-modal').on('click', function(e){
+		e.preventDefault();
+		$('body').append('<div class="overlay"></div>').end().css('paddingRight', '17px');
+		$('.modal').fadeIn(1000);
+		$(this).fadeOut();
+	});
+
+	$('.modal .close').on('click', function(){
+		$('.modal').fadeOut();
+		$('.show-modal').fadeIn();
+		$('.overlay').remove();
+	});
+
 
 });
