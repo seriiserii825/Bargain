@@ -198,6 +198,9 @@ h1,h2,h3,h4,h5,h6{
 			max-width: 100%;
 			text-align: center;
 		}
+		@media screen and (max-width: 450px) {
+    	font-size: 40px;
+    }
 	}
 	.img-wrap{
 		position: relative;
@@ -223,7 +226,7 @@ h1,h2,h3,h4,h5,h6{
 		@media screen and (max-width: @sm) {
 			margin-left: auto;
 			margin-right: auto;
-			width: 320px;
+			max-width: 320px;
 		}
 		&::before{
 			content: '';
@@ -251,3 +254,103 @@ h1,h2,h3,h4,h5,h6{
 	}
 }
 
+/* reviews */
+.reviews{
+	padding: 50px 0;
+	min-height: 500px;
+	background: url('../img/reviews-bg.jpg') no-repeat center;
+	background-size: cover;
+	/* reviews__title */
+	&__title{
+		margin-bottom: 50px;
+		font-size: 55px;
+		line-height: 1;
+		text-shadow: -3px -3px 0 rgba(60, 34, 88, 0.61);
+		text-align: right;
+		color: @accent;
+	}
+	.img-wrap{
+		position: relative;
+		top: -5px;
+		left: 70px;
+		.inline-block;
+		width: 170px;
+		height: 170px;
+		border: 6px solid rgba(60, 34, 88, 0.83);
+		border-radius: 50%;
+		overflow: hidden;
+		z-index: 2;
+	}
+	/* reviews__item-content */
+	&__item-content{
+		position: relative;
+		.inline-block;
+		margin-bottom: 30px;
+		padding: 15px 25px;
+		padding-left: 80px;
+		max-width: 460px;
+		background: rgba(60, 34, 88, 0.83);
+		z-index: 1;
+		@media screen and (max-width: 600px) {
+		  display: table;
+		  margin-left: auto;
+		  margin-right: auto;
+		}
+		&::after{
+			content: '';
+	    position: absolute;
+	    top: 0;
+	    right: -80px;
+	    border: 80px solid transparent;
+	    border-top-color: rgba(60, 34, 88, 0.83);
+	    border-top-width: 158px;
+	    border-bottom-width: 0;
+	    border-left-width: 0;
+	    @media screen and (max-width: 600px) {
+		    	display: none;
+		    }
+		}
+	}
+	/* review__item:nth-child(2) */
+	&__item:nth-child(2){
+		.reviews__item-content{
+			left: 130px;
+			padding-right: 80px;
+			padding-left: 25px;
+			@media screen and (max-width: 600px) {
+	    	left: 0;
+	    }
+			&::after{
+				display: none;
+			}
+			&::before{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -80px;
+		    border: 80px solid transparent;
+		    border-top-color: rgba(60, 34, 88, 0.83);
+		    border-top-width: 158px;
+		    border-bottom-width: 0;
+		    border-right-width: 0;
+		    @media screen and (max-width: 600px) {
+		    	display: none;
+		    }
+			}
+		}
+	}
+	&__item-title{
+		margin-bottom: 0;
+	}
+	&__item-text{
+		margin-bottom: 0;
+		line-height: 1.3;
+	}
+	&__bottom-link{
+		display: table;
+		margin: 0 auto;
+		font-size: 28px;
+		text-transform: lowercase;
+		color: @mainColor;
+	}
+}
