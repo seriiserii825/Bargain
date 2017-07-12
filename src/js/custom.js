@@ -27,6 +27,9 @@ $(function () {
 		}
 	});
 
+	/*advantages equalheights
+	===============================*/
+	$('.advantages__item-content p').equalHeights();
 
 
 });

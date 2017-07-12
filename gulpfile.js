@@ -138,7 +138,7 @@ gulp.task('min', ['cleanmin','cssmin', 'jsmin']);
 /*libs
 ===============================*/
 gulp.task('libs', function(){
-	gulp.src('src/libs/{html5shiv/respond}*.*')
+	gulp.src('src/libs/**/*.*')
 		.pipe(gulp.dest('build/libs/'))
 });
 
@@ -223,7 +223,8 @@ gulp.task('build', [
 	'img',
 	'sprite',
 	'libs',
-    'head',
+  'head',
+  'libs',
 	'mail',
 	'head',
 	'fonts-less'
