@@ -2,3 +2,131 @@
 @import "../imports/_mixins";
 @import "../imports/sprite";
 @import "../imports/icons";
+
+/* services */
+.services{
+  position: relative;
+  min-height: 500px;
+  background-image: url("../img/services-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: 3;
+  /* services__content */
+  &__content{
+    position: relative;
+    padding: 48px 35px 40px 80px;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: @mainColor;
+      opacity: .75;
+      z-index: -1;
+    }
+  }
+  /* services__title */
+  &__title{
+    font-size: 55px;
+    line-height: .8;
+    text-transform: uppercase;
+    text-align: right;
+    opacity: .5;
+  }
+  /* services__subtitle */
+  &__subtitle{
+  	margin-bottom: 50px;
+    font-size: 25px;
+    text-align: right;
+    text-transform: uppercase;
+    color: @white;
+	  opacity: .5;
+  }
+	/* services__button */
+  &__button{
+    float: right;
+    &-text{
+    	max-width: 265px;
+    	color: #A090FB;
+    }
+  }
+  /* services__list */
+  &__list{	  	
+	   li{
+	   		position: relative;
+	   		display: table;
+	  		a{
+	  			position: relative;
+	  			display: inline-block;
+	  			padding: 5px 30px;
+					.proximabold;
+		  		font-size: 24px;
+		  		color: @white;
+		  		&:active,
+		  		&:focus{
+		  			text-decoration: none;
+		  			outline: none;
+		  		}
+	  		}
+	  		&.active{
+		  		&	> a{
+		  				position: relative;
+		  				background: @accent;
+		  				&::before{
+		  					content: '';
+								position: absolute;
+								top: -38px;
+								left: -116px;
+								width: 126px;
+								height: 126px;
+								background: @accent url('../img/services__list-bg.png') center no-repeat;
+								box-shadow: 0 0 0 9px rgba(60, 34, 88, 0.41);
+								border-radius: 50%;
+		  				}
+		  				&::after{
+		  					content: '';
+		  					position: absolute;
+		  					top: 0;
+		  					right: -50px;
+		  					width: 0;
+		  					height: 0;
+		  					border: 25px solid transparent;
+		  					border-left-color: @accent;
+		  				}
+		  			}
+	  		}
+	  	}
+  }
+  /* services__sublist */
+	&__sublist{
+		display: none;
+		li{
+			line-height: 1.3;
+			a{
+				position: relative;
+				display: inline-block;
+				margin-left: 50px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				line-height: 1;
+				.proximalight;
+				&::before{
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 16px;
+					margin-top: -3px;
+					width: 6px;
+					height: 6px;
+					border-radius: 50%;
+					background: @white;
+				}
+				&:hover{
+					background: @accent;
+				}
+			}
+		}
+	}
+}

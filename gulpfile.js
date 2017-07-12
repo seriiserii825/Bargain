@@ -77,10 +77,10 @@ gulp.task('css', function () {
 		.pipe(prefixer()) // Добавим вендорные префиксы
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('build/css/'))
+		.pipe(browserSync.stream())
 		.pipe(cssmin({showLog: true}))
 		.pipe(rename({suffix: '.min', prefix : ''}))
-		.pipe(gulp.dest('build/css/'))
-		.pipe(browserSync.stream());
+		.pipe(gulp.dest('build/css/'));
 });
 /*head
 ===============================*/
